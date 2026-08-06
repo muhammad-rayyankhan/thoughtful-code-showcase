@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/section";
 import {
   about,
+  additional,
   archiveProjects,
   education,
   experience,
@@ -13,18 +14,21 @@ import {
 export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-heading" className="py-20 sm:py-28">
-      <p className="meta">{profile.role} · {profile.location}</p>
+      <p className="meta">
+        <span className="text-primary">$</span> {profile.role} · {profile.location}
+      </p>
       <h1
         id="hero-heading"
-        className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl"
+        className="chrome mt-5 max-w-3xl font-display text-[2.6rem] font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl"
       >
         {profile.name}
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
         {profile.summary}
+        <span className="blink-cursor ml-1 inline-block h-[1em] w-[0.5em] translate-y-[0.08em] bg-primary align-middle" />
       </p>
 
-      <p className="mt-6 inline-flex items-center gap-2 border-l-2 border-highlight pl-3 font-mono text-xs uppercase tracking-[0.12em] text-highlight">
+      <p className="mt-7 inline-flex items-center gap-2 border border-highlight bg-highlight/10 px-3 py-1.5 font-mono text-xs uppercase tracking-[0.12em] text-highlight">
         <span aria-hidden="true">●</span>
         {profile.available}
       </p>
@@ -32,13 +36,13 @@ export function Hero() {
       <div className="mt-9 flex flex-wrap items-center gap-3">
         <a
           href="#projects"
-          className="inline-flex min-h-11 items-center rounded-sm bg-primary px-5 font-mono text-xs uppercase tracking-[0.12em] text-primary-foreground transition-opacity hover:opacity-90"
+          className="inline-flex min-h-11 items-center border border-primary bg-primary px-5 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground transition-transform hover:-translate-y-0.5"
         >
           View projects
         </a>
         <a
           href="#contact"
-          className="inline-flex min-h-11 items-center rounded-sm border border-border-strong px-5 font-mono text-xs uppercase tracking-[0.12em] text-foreground transition-colors hover:bg-muted"
+          className="inline-flex min-h-11 items-center border border-border-strong px-5 font-mono text-xs uppercase tracking-[0.14em] text-foreground transition-colors hover:border-highlight hover:text-highlight"
         >
           Get in touch
         </a>
@@ -69,7 +73,7 @@ export function About() {
           </div>
           <dl className="mt-10 space-y-4 sm:mt-0">
             {about.facts.map((f) => (
-              <div key={f.label} className="border-t border-border pt-3">
+              <div key={f.label} className="border-t-2 border-border pt-3">
                 <dt className="meta">{f.label}</dt>
                 <dd className="mt-1 text-sm text-foreground">{f.value}</dd>
               </div>
@@ -86,20 +90,22 @@ export function FeaturedProjects() {
     <Section
       id="projects"
       index="02"
-      title="Featured projects"
-      lead="Three systems I designed and shipped, with the constraints and the results."
+      title="Selected projects"
+      lead="Things I designed and built, with what they do and what I learned."
     >
-      <div className="space-y-14">
+      <div className="space-y-12">
         {featuredProjects.map((p) => (
           <article key={p.title} className="grid gap-6 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-8">
             <div className="sm:pt-2">
-              <p className="font-mono text-3xl font-medium text-border-strong">{p.index}</p>
+              <p className="font-display text-4xl font-bold text-border-strong">{p.index}</p>
               <p className="meta mt-2">{p.year}</p>
               <p className="meta">{p.role}</p>
             </div>
 
-            <div className="max-w-2xl border-l border-border pl-5 sm:pl-6">
-              <h3 className="text-xl font-semibold tracking-tight text-foreground">{p.title}</h3>
+            <div className="panel max-w-2xl p-5 sm:p-6">
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
+                {p.title}
+              </h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">{p.summary}</p>
 
               <ul className="mt-5 space-y-2">
@@ -113,10 +119,7 @@ export function FeaturedProjects() {
 
               <ul className="mt-5 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
-                  <li
-                    key={s}
-                    className="rounded-sm border border-border px-2 py-1 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-muted-foreground"
-                  >
+                  <li key={s} className="chip">
                     {s}
                   </li>
                 ))}
@@ -148,24 +151,24 @@ export function Archive() {
     <Section
       id="archive"
       index="03"
-      title="Project archive"
-      lead="Smaller tools and experiments, most of them open source."
+      title="Archive"
+      lead="Smaller builds, experiments, and coursework kept in the open."
     >
       <ul className="sm:pl-40">
         {archiveProjects.map((p) => (
           <li key={p.title} className="border-t border-border last:border-b">
             <a
               href={p.href}
-              className="group grid gap-1 py-4 sm:grid-cols-[5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6"
+              className="group grid gap-1 py-4 transition-colors hover:bg-surface sm:grid-cols-[5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6"
             >
               <span className="meta">{p.year}</span>
               <span className="min-w-0">
                 <span className="flex flex-wrap items-baseline gap-x-3">
-                  <span className="text-base font-medium text-foreground underline decoration-transparent decoration-1 underline-offset-4 transition-colors group-hover:decoration-link">
+                  <span className="text-base font-medium text-foreground underline decoration-transparent decoration-1 underline-offset-4 transition-colors group-hover:decoration-highlight">
                     {p.title}
                   </span>
                   <ArrowUpRight
-                    className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-link"
+                    className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-highlight"
                     aria-hidden="true"
                   />
                 </span>
@@ -186,14 +189,14 @@ export function Archive() {
 
 export function Skills() {
   return (
-    <Section id="skills" index="04" title="Skills">
-      <div className="grid gap-8 sm:grid-cols-2 sm:pl-40 lg:gap-10">
+    <Section id="skills" index="04" title="Technical skills">
+      <div className="grid gap-6 sm:grid-cols-2 sm:pl-40 lg:gap-8">
         {skillGroups.map((g) => (
-          <div key={g.title} className="border-t border-border pt-4">
-            <h3 className="meta">{g.title}</h3>
-            <ul className="mt-3 space-y-1.5">
+          <div key={g.title} className="panel p-4">
+            <h3 className="meta text-primary">{g.title}</h3>
+            <ul className="mt-3 flex flex-wrap gap-1.5">
               {g.items.map((i) => (
-                <li key={i} className="text-sm text-foreground/90">
+                <li key={i} className="chip">
                   {i}
                 </li>
               ))}
@@ -211,7 +214,7 @@ function Timeline({ items }: { items: typeof experience }) {
       {items.map((item) => (
         <li key={item.title} className="grid gap-1 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-6">
           <p className="meta sm:pt-1">{item.period}</p>
-          <div className="max-w-2xl">
+          <div className="max-w-2xl border-l-2 border-border pl-4">
             <h4 className="text-base font-semibold text-foreground">
               {item.title}
               <span className="font-normal text-muted-foreground"> — {item.org}</span>
@@ -229,17 +232,44 @@ export function Experience() {
     <Section id="experience" index="05" title="Experience & education">
       <div className="space-y-12 sm:pl-40">
         <div>
-          <h3 className="meta border-t border-border pt-4">Experience</h3>
+          <h3 className="meta border-t-2 border-border pt-4 text-primary">Experience</h3>
           <div className="mt-6">
             <Timeline items={experience} />
           </div>
         </div>
         <div>
-          <h3 className="meta border-t border-border pt-4">Education</h3>
+          <h3 className="meta border-t-2 border-border pt-4 text-primary">Education</h3>
           <div className="mt-6">
             <Timeline items={education} />
           </div>
         </div>
+      </div>
+    </Section>
+  );
+}
+
+export function Additional() {
+  const groups = [
+    { title: "Languages", items: additional.languages },
+    { title: "Soft skills", items: additional.softSkills },
+    { title: "Interests", items: additional.interests },
+  ];
+
+  return (
+    <Section id="additional" index="06" title="Additional">
+      <div className="grid gap-6 sm:grid-cols-3 sm:pl-40">
+        {groups.map((g) => (
+          <div key={g.title} className="border-t-2 border-border pt-4">
+            <h3 className="meta text-highlight">{g.title}</h3>
+            <ul className="mt-3 space-y-1.5">
+              {g.items.map((i) => (
+                <li key={i} className="text-sm text-foreground/90">
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </Section>
   );
