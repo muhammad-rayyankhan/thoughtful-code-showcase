@@ -151,7 +151,7 @@ export function Archive() {
       title="Project archive"
       lead="Smaller tools and experiments, most of them open source."
     >
-      <ul className="sm:pl-[8.5rem]">
+      <ul className="sm:pl-40">
         {archiveProjects.map((p) => (
           <li key={p.title} className="border-t border-border last:border-b">
             <a
@@ -187,7 +187,7 @@ export function Archive() {
 export function Skills() {
   return (
     <Section id="skills" index="04" title="Skills">
-      <div className="grid gap-8 sm:grid-cols-2 sm:pl-[8.5rem] lg:gap-10">
+      <div className="grid gap-8 sm:grid-cols-2 sm:pl-40 lg:gap-10">
         {skillGroups.map((g) => (
           <div key={g.title} className="border-t border-border pt-4">
             <h3 className="meta">{g.title}</h3>
@@ -227,7 +227,7 @@ function Timeline({ items }: { items: typeof experience }) {
 export function Experience() {
   return (
     <Section id="experience" index="05" title="Experience & education">
-      <div className="space-y-12 sm:pl-[8.5rem]">
+      <div className="space-y-12 sm:pl-40">
         <div>
           <h3 className="meta border-t border-border pt-4">Experience</h3>
           <div className="mt-6">

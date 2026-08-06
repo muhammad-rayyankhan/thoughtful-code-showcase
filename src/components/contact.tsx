@@ -37,7 +37,7 @@ export function Contact() {
       title="Contact"
       lead="Happy to talk about backend architecture, platform work, or a role you're hiring for."
     >
-      <div className="grid gap-10 sm:pl-[8.5rem] lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-12">
+      <div className="grid gap-10 sm:pl-40 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-12">
         <form onSubmit={onSubmit} noValidate className="space-y-5">
           <div>
             <label htmlFor="name" className="meta">
