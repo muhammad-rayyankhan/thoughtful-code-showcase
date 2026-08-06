@@ -146,15 +146,16 @@ export function Contact() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border py-10">
+    <footer className="border-t-2 border-border py-10">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="meta">
-          © {new Date().getFullYear()} {profile.name} — built and maintained by hand
+          © {new Date().getFullYear()} {profile.name} — hand-built, no templates
         </p>
         <a href="#top" className="link-inline font-mono text-xs uppercase tracking-[0.12em]">
-          Back to top
+          ▲ Back to top
         </a>
       </div>
     </footer>
   );
 }
+
