@@ -9,8 +9,10 @@ const sections = [
   { id: "archive", label: "Archive" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "additional", label: "More" },
   { id: "contact", label: "Contact" },
 ];
+
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
