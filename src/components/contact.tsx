@@ -104,10 +104,11 @@ export function Contact() {
 
           <button
             type="submit"
-            className="inline-flex min-h-11 items-center rounded-sm bg-primary px-5 font-mono text-xs uppercase tracking-[0.12em] text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-flex min-h-11 items-center border border-primary bg-primary px-5 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             Send message
           </button>
+
 
           <p aria-live="polite" className="min-h-5 font-mono text-xs text-primary">
             {sent ? "Sent — thanks, I'll reply within a couple of days." : ""}
