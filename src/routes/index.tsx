@@ -1,11 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
-import { About, Archive, Experience, FeaturedProjects, Hero, Skills } from "@/components/sections";
+import {
+  About,
+  Additional,
+  Archive,
+  Experience,
+  FeaturedProjects,
+  Hero,
+  Skills,
+} from "@/components/sections";
 import { Contact, SiteFooter } from "@/components/contact";
 
-const title = "Ada Kensington — Software Engineer";
+const title = "Muhammad Rayyan Khan — Software Engineer";
 const description =
-  "Portfolio of Ada Kensington, a software engineer building backend systems, developer tooling, and observable platform architecture.";
+  "Portfolio of Muhammad Rayyan Khan, a software engineering student building AI-powered applications, web platforms, and REST APIs with Python, FastAPI, React, and Next.js.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,10 +31,10 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-dvh">
+    <div className="crt min-h-dvh">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:text-primary-foreground"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-primary focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:text-primary-foreground"
       >
         Skip to content
       </a>
@@ -38,6 +46,7 @@ function Index() {
         <Archive />
         <Skills />
         <Experience />
+        <Additional />
         <Contact />
         <SiteFooter />
       </main>

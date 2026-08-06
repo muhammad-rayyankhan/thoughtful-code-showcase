@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { profile } from "@/data/portfolio";
+
 
 const sections = [
   { id: "about", label: "About" },
@@ -9,8 +9,10 @@ const sections = [
   { id: "archive", label: "Archive" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "additional", label: "More" },
   { id: "contact", label: "Contact" },
 ];
+
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -35,13 +37,11 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-[2px]">
       <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-8">
-        <a
-          href="#top"
-          className="font-mono text-sm font-medium tracking-tight text-foreground"
-        >
-          {profile.name.toLowerCase().replace(" ", "")}
+        <a href="#top" className="font-mono text-sm font-medium tracking-tight text-foreground">
+          <span className="text-highlight">◆</span> rayyan
           <span className="text-primary">.dev</span>
         </a>
+
 
         <div className="flex items-center gap-2">
           <nav aria-label="Sections" className="hidden md:block">
