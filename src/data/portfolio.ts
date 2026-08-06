@@ -1,9 +1,9 @@
 export const profile = {
-  name: "Ada Kensington",
-  role: "Software Engineer",
-  location: "Berlin, Germany",
+  name: "Muhammad Rayyan Khan",
+  role: "SOFTWARE ENGINEER",
+  location: "KARACHI, PAKISTAN",
   email: "hello@example.com",
-  available: "Open to senior backend & platform roles",
+  available: "Open to new engineering opportunities",
   summary:
     "I build backend systems and developer tooling that stay comprehensible as they grow. Ten years of writing services, migrating data, and deleting code that stopped earning its keep.",
   links: [
