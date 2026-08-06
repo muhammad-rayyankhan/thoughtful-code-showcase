@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { profile } from "@/data/portfolio";
+
 
 const sections = [
   { id: "about", label: "About" },
