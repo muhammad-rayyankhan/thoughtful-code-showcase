@@ -28,16 +28,17 @@ export function Contact() {
   }
 
   const field =
-    "mt-2 w-full rounded-sm border border-input bg-surface px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground";
+    "mt-2 w-full border border-input bg-surface px-3 py-2.5 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:border-primary";
 
   return (
     <Section
       id="contact"
-      index="06"
+      index="07"
       title="Contact"
-      lead="Happy to talk about backend architecture, platform work, or a role you're hiring for."
+      lead="Happy to talk about AI projects, full-stack work, internships, or a role you're hiring for."
     >
       <div className="grid gap-10 sm:pl-40 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-12">
+
         <form onSubmit={onSubmit} noValidate className="space-y-5">
           <div>
             <label htmlFor="name" className="meta">
