@@ -132,6 +132,18 @@ export function Contact() {
               </a>
             </dd>
           </div>
+          <div className="border-t border-border pt-3">
+            <dt className="meta">Resume</dt>
+            <dd className="mt-1">
+              <a
+                href="/Muhammad_Rayyan_Khan_Resume.docx"
+                download="Muhammad_Rayyan_Khan_Resume.docx"
+                className="link-inline inline-flex items-center gap-1"
+              >
+                Download DOCX
+              </a>
+            </dd>
+          </div>
 
           <div className="border-t border-border pt-3">
             <dt className="meta">Elsewhere</dt>
