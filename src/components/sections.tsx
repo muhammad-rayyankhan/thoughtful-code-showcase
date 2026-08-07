@@ -3,13 +3,13 @@ import { Section } from "@/components/section";
 import {
   about,
   additional,
-  archiveProjects,
+  certifications,
   education,
-  experience,
   featuredProjects,
   profile,
   skillGroups,
 } from "@/data/portfolio";
+
 
 export function Hero() {
   return (
