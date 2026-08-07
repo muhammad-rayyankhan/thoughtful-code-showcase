@@ -43,9 +43,9 @@ function Index() {
         <Hero />
         <About />
         <FeaturedProjects />
-        <Archive />
         <Skills />
-        <Experience />
+        <Education />
+
         <Additional />
         <Contact />
         <SiteFooter />
