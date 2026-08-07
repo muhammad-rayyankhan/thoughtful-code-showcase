@@ -148,12 +148,7 @@ export function FeaturedProjects() {
 
 export function Archive() {
   return (
-    <Section
-      id="archive"
-      index="03"
-      title="Archive"
-      lead="Smaller builds, experiments, and coursework kept in the open."
-    >
+    <section id="archive" className="border-t border-border py-16 sm:py-20">
       <ul className="sm:pl-40">
         {archiveProjects.map((p) => (
           <li key={p.title} className="border-t border-border last:border-b">
@@ -161,11 +156,10 @@ export function Archive() {
               href={p.href}
               className="group grid gap-1 py-4 transition-colors hover:bg-surface sm:grid-cols-[5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6"
             >
-              <span className="meta">{p.year}</span>
+              <span className="meta"></span>
               <span className="min-w-0">
                 <span className="flex flex-wrap items-baseline gap-x-3">
                   <span className="text-base font-medium text-foreground underline decoration-transparent decoration-1 underline-offset-4 transition-colors group-hover:decoration-highlight">
-                    {p.title}
                   </span>
                   <ArrowUpRight
                     className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-highlight"
@@ -173,17 +167,15 @@ export function Archive() {
                   />
                 </span>
                 <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
                 </span>
               </span>
               <span className="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-muted-foreground">
-                {p.tags.join(" · ")}
               </span>
             </a>
           </li>
         ))}
       </ul>
-    </Section>
+    </section>
   );
 }
 
