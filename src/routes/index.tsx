@@ -45,8 +45,8 @@ function Index() {
         <FeaturedProjects />
         <Skills />
         <Education />
-
         <Additional />
+
         <Contact />
         <SiteFooter />
       </main>
