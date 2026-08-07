@@ -1,22 +1,23 @@
 export const profile = {
   name: "Muhammad Rayyan Khan",
   role: "SOFTWARE ENGINEER",
-  location: "PAKISTAN",
-  email: "iamrayyan001@gmail.com",
+  location: "KARACHI, PAKISTAN",
+  email: "ray990khan@gmail.com",
+  phone: "+92 323 2701819",
   available: "Open to internships & junior engineering roles",
   summary:
-    "Software Engineering student with a foundation in Artificial Intelligence, full-stack development, and software engineering. I build AI-powered applications, web platforms, and RESTful APIs with Python, FastAPI, React, and Next.js.",
+    "Computer Science student with hands-on experience in Artificial Intelligence, full-stack development, and software engineering. I build AI-powered applications, web platforms, and RESTful APIs with Python, FastAPI, React, and Next.js.",
   links: [
     { label: "GitHub", href: "https://github.com/muhammad-rayyankhan" },
     { label: "LinkedIn", href: "https://linkedin.com/in/iamrayyan001" },
-    { label: "Email", href: "mailto:iamrayyan001@gmail.com" },
+    { label: "Email", href: "mailto:ray990khan@gmail.com" },
   ],
 };
 
 export const about = {
   paragraphs: [
-    "I'm a software engineering student who likes shipping small, working systems and then making them sturdier. Most of my time goes into AI-powered applications, agentic workflows, and the APIs that hold them together.",
-    "Passionate about solving real-world problems through software, collaborating on technical challenges, and continuously expanding academic and practical expertise — usually by building the thing before I feel ready to.",
+    "I'm a software engineering student at Karachi University (UBIT) who likes shipping small, working systems and then making them sturdier. Most of my time goes into AI-powered applications, agentic workflows, and the APIs that hold them together.",
+    "Passionate about solving real-world problems through software and continuously expanding my technical expertise — usually by building the thing before I feel ready to.",
     "Currently exploring multi-agent orchestration, automation with the OpenAI Agents SDK and n8n, and full-stack architecture that stays readable as it grows.",
   ],
   facts: [
@@ -36,9 +37,9 @@ export const featuredProjects = [
     summary:
       "An AI-native visual social platform where autonomous AI agents create and interact through generative visual content.",
     outcomes: [
-      "Designing scalable architecture for AI-driven content generation",
+      "Designing scalable multi-agent architecture for AI-driven content generation",
       "Modelling autonomous social interactions between agents",
-      "Exploring agentic AI workflows and multi-agent orchestration patterns",
+      "Exploring agentic AI workflows and orchestration patterns",
     ],
     stack: ["React", "Next.js", "TypeScript", "AI Agents"],
     links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan" }],
@@ -90,37 +91,6 @@ export const featuredProjects = [
   },
 ];
 
-export const archiveProjects = [
-  {
-    year: "2025",
-    title: "Agent experiments",
-    description: "Small OpenAI Agents SDK prototypes testing tool use and handoff patterns.",
-    tags: ["Python", "Agents SDK"],
-    href: "https://github.com/muhammad-rayyankhan",
-  },
-  {
-    year: "2025",
-    title: "n8n automations",
-    description: "Workflow automations wiring APIs, notifications, and scheduled jobs together.",
-    tags: ["n8n", "REST"],
-    href: "https://github.com/muhammad-rayyankhan",
-  },
-  {
-    year: "2024",
-    title: "Socket chat",
-    description: "TCP/IP socket programming exercise: a multi-client chat server.",
-    tags: ["C", "Networking"],
-    href: "https://github.com/muhammad-rayyankhan",
-  },
-  {
-    year: "2024",
-    title: "Coursework systems",
-    description: "OOP, data structures, and database systems assignments kept in the open.",
-    tags: ["C++", "MySQL"],
-    href: "https://github.com/muhammad-rayyankhan",
-  },
-];
-
 export const skillGroups = [
   {
     title: "Languages",
@@ -135,68 +105,65 @@ export const skillGroups = [
     items: ["FastAPI", "Django", "Laravel", "Node.js", "REST APIs"],
   },
   {
-    title: "Networking & systems",
-    items: ["Network programming (TCP/IP)", "Socket programming", "Linux"],
+    title: "Networking",
+    items: ["Socket programming", "TCP/IP", "Network programming"],
   },
   {
     title: "Databases",
     items: ["MySQL", "PostgreSQL"],
   },
   {
-    title: "AI, automation & tools",
-    items: ["OpenAI Agents SDK", "n8n", "Docker", "Git & GitHub", "VS Code"],
+    title: "AI, automation & DevOps",
+    items: ["OpenAI Agents SDK", "n8n", "Docker", "Git & GitHub", "Linux", "VS Code"],
   },
 ];
 
-export const experience = [
+export const certifications = [
   {
-    period: "2025 — Present",
-    title: "Independent projects",
-    org: "Self-directed",
-    detail:
-      "Building AI-powered applications and full-stack platforms end to end — agentic workflows, REST APIs, and responsive frontends.",
+    period: "Jan 2026",
+    title: "Agentic AI Level 1 Developer",
+    org: "PIAIC",
+    detail: "Agentic AI development track covering agent design, tooling, and orchestration.",
   },
   {
-    period: "Ongoing",
-    title: "Academic & technical projects",
-    org: "University coursework",
-    detail:
-      "Object-oriented programming, data structures, database systems, software engineering, and operating systems, applied through hands-on builds.",
+    period: "May 2023",
+    title: "Build a Mobile App with Google Sheets (No-Code)",
+    org: "Coursera",
+    detail: "Rapid app prototyping on top of spreadsheet-backed data.",
+  },
+  {
+    period: "Oct 2022",
+    title: "Freelancing & Digital Marketing (x2)",
+    org: "DigiSkills.pk",
+    detail: "Two certifications covering client work fundamentals and digital marketing.",
   },
 ];
 
 export const education = [
   {
-    period: "In progress",
-    title: "BSc Software Engineering",
-    org: "Pakistan",
+    period: "Expected 2028",
+    title: "B.S. Software Engineering",
+    org: "Karachi University (UBIT)",
     detail:
       "Relevant coursework: Object-Oriented Programming · Data Structures · Database Systems · Software Engineering · Operating Systems.",
   },
   {
-    period: "Completed",
-    title: "Higher Secondary Certificate (Pre-Engineering)",
-    org: "Pakistan",
-    detail: "Intermediate studies in mathematics, physics, and computing fundamentals.",
+    period: "2024",
+    title: "Higher Secondary Certificate — Computer Science",
+    org: "SSAT Degree College, Karachi",
+    detail: "Intermediate studies in computing fundamentals, mathematics, and physics.",
   },
   {
-    period: "Completed",
-    title: "Secondary School Certificate (Science)",
-    org: "Pakistan",
+    period: "2022",
+    title: "Secondary School Certificate — Science",
+    org: "The Educators, Karachi",
     detail: "Science stream, where the programming habit started.",
   },
 ];
 
 export const additional = {
   languages: ["Urdu (Native)", "English (Professional)", "Arabic (Basic)", "Turkish (Basic)"],
-  softSkills: [
-    "Problem solving",
-    "Critical thinking",
-    "Teamwork",
-    "Communication",
-    "Adaptability",
-    "Time management",
-  ],
+  softSkills: ["Teamwork", "Communication", "Adaptability"],
   interests: [
     "Artificial Intelligence",
     "Agentic AI",
