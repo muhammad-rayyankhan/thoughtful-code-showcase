@@ -216,7 +216,7 @@ export function Additional() {
   ];
 
   return (
-    <Section id="additional" index="06" title="Additional">
+    <Section id="additional" index="05" title="Additional">
       <div className="grid gap-6 sm:grid-cols-3 sm:pl-40">
         {groups.map((g) => (
           <div key={g.title} className="border-t-2 border-border pt-4">
