@@ -125,6 +125,15 @@ export function Contact() {
             </dd>
           </div>
           <div className="border-t border-border pt-3">
+            <dt className="meta">Phone</dt>
+            <dd className="mt-1">
+              <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="link-inline">
+                {profile.phone}
+              </a>
+            </dd>
+          </div>
+
+          <div className="border-t border-border pt-3">
             <dt className="meta">Elsewhere</dt>
             <dd className="mt-1 flex flex-wrap gap-x-5 gap-y-1">
               {profile.links.map((l) => (
