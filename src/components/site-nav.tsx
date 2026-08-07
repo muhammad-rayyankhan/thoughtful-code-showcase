@@ -6,12 +6,12 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const sections = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
-  { id: "archive", label: "Archive" },
   { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
   { id: "additional", label: "More" },
   { id: "contact", label: "Contact" },
 ];
+
 
 
 export function SiteNav() {

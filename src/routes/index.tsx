@@ -3,12 +3,12 @@ import { SiteNav } from "@/components/site-nav";
 import {
   About,
   Additional,
-  Archive,
-  Experience,
+  Education,
   FeaturedProjects,
   Hero,
   Skills,
 } from "@/components/sections";
+
 import { Contact, SiteFooter } from "@/components/contact";
 
 const title = "Muhammad Rayyan Khan — Software Engineer";
@@ -43,10 +43,10 @@ function Index() {
         <Hero />
         <About />
         <FeaturedProjects />
-        <Archive />
         <Skills />
-        <Experience />
+        <Education />
         <Additional />
+
         <Contact />
         <SiteFooter />
       </main>

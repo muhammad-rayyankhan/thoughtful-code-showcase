@@ -33,7 +33,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="07"
+      index="06"
       title="Contact"
       lead="Happy to talk about AI projects, full-stack work, internships, or a role you're hiring for."
     >
@@ -124,6 +124,15 @@ export function Contact() {
               </a>
             </dd>
           </div>
+          <div className="border-t border-border pt-3">
+            <dt className="meta">Phone</dt>
+            <dd className="mt-1">
+              <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="link-inline">
+                {profile.phone}
+              </a>
+            </dd>
+          </div>
+
           <div className="border-t border-border pt-3">
             <dt className="meta">Elsewhere</dt>
             <dd className="mt-1 flex flex-wrap gap-x-5 gap-y-1">

@@ -3,13 +3,13 @@ import { Section } from "@/components/section";
 import {
   about,
   additional,
-  archiveProjects,
+  certifications,
   education,
-  experience,
   featuredProjects,
   profile,
   skillGroups,
 } from "@/data/portfolio";
+
 
 export function Hero() {
   return (
@@ -146,45 +146,9 @@ export function FeaturedProjects() {
   );
 }
 
-export function Archive() {
-  return (
-    <section id="archive" className="border-t border-border py-16 sm:py-20">
-      <ul className="sm:pl-40">
-        {archiveProjects.map((p) => (
-          <li key={p.title} className="border-t border-border last:border-b">
-            <a
-              href={p.href}
-              className="group grid gap-1 py-4 transition-colors hover:bg-surface sm:grid-cols-[5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6"
-            >
-              <span className="meta">{"\n"}</span>
-              <span className="min-w-0">
-                <span className="flex flex-wrap items-baseline gap-x-3">
-                  <span className="text-base font-medium text-foreground underline decoration-transparent decoration-1 underline-offset-4 transition-colors group-hover:decoration-highlight">
-                    {"\n"}
-                  </span>
-                  <ArrowUpRight
-                    className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-highlight"
-                    aria-hidden="true"
-                  />
-                </span>
-                <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
-                  {"\n"}
-                </span>
-              </span>
-              <span className="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-muted-foreground">
-                {"\n"}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export function Skills() {
   return (
-    <Section id="skills" index="04" title="Technical skills">
+    <Section id="skills" index="03" title="Technical skills">
       <div className="grid gap-6 sm:grid-cols-2 sm:pl-40 lg:gap-8">
         {skillGroups.map((g) => (
           <div key={g.title} className="panel p-4">
@@ -203,7 +167,7 @@ export function Skills() {
   );
 }
 
-function Timeline({ items }: { items: typeof experience }) {
+function Timeline({ items }: { items: typeof education }) {
   return (
     <ol className="space-y-8">
       {items.map((item) => (
@@ -222,26 +186,27 @@ function Timeline({ items }: { items: typeof experience }) {
   );
 }
 
-export function Experience() {
+export function Education() {
   return (
-    <Section id="experience" index="05" title="Experience & education">
+    <Section id="education" index="04" title="Education & certifications">
       <div className="space-y-12 sm:pl-40">
-        <div>
-          <h3 className="meta border-t-2 border-border pt-4 text-primary">Experience</h3>
-          <div className="mt-6">
-            <Timeline items={experience} />
-          </div>
-        </div>
         <div>
           <h3 className="meta border-t-2 border-border pt-4 text-primary">Education</h3>
           <div className="mt-6">
             <Timeline items={education} />
           </div>
         </div>
+        <div>
+          <h3 className="meta border-t-2 border-border pt-4 text-primary">Certifications</h3>
+          <div className="mt-6">
+            <Timeline items={certifications} />
+          </div>
+        </div>
       </div>
     </Section>
   );
 }
+
 
 export function Additional() {
   const groups = [
@@ -251,7 +216,7 @@ export function Additional() {
   ];
 
   return (
-    <Section id="additional" index="06" title="Additional">
+    <Section id="additional" index="05" title="Additional">
       <div className="grid gap-6 sm:grid-cols-3 sm:pl-40">
         {groups.map((g) => (
           <div key={g.title} className="border-t-2 border-border pt-4">
