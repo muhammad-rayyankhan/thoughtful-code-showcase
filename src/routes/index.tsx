@@ -1,19 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
-import {
-  About,
-  Additional,
-  Education,
-  FeaturedProjects,
-  Hero,
-  Skills,
-} from "@/components/sections";
+import { About, FeaturedProjects, Hero } from "@/components/sections";
 
 import { Contact, SiteFooter } from "@/components/contact";
 
 const title = "Muhammad Rayyan Khan — Software Engineer";
 const description =
-  "Portfolio of Muhammad Rayyan Khan, a software engineering student building AI-powered applications, web platforms, and REST APIs with Python, FastAPI, React, and Next.js.";
+  "Projects and engineering work by Muhammad Rayyan Khan — AI agent systems, full-stack platforms, and the APIs that hold them together.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +16,11 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "460" },
+      { property: "og:image:height", content: "460" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
   }),
   component: Index,
@@ -43,9 +40,6 @@ function Index() {
         <Hero />
         <About />
         <FeaturedProjects />
-        <Skills />
-        <Education />
-        <Additional />
 
         <Contact />
         <SiteFooter />

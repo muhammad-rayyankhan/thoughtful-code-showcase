@@ -5,12 +5,16 @@ export function Section({
   index,
   title,
   lead,
+  indent = false,
   children,
 }: {
   id: string;
   index: string;
   title: string;
   lead?: string;
+  /** Offset children to align with the header's content column, for sections
+   * that don't build their own label-column grid (see Contact). */
+  indent?: boolean;
   children: ReactNode;
 }) {
   return (
@@ -19,7 +23,7 @@ export function Section({
       aria-labelledby={`${id}-heading`}
       className="border-t border-border py-16 sm:py-20"
     >
-      <div className="mb-10 grid gap-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-8">
+      <div className="mb-10 grid gap-3 sm:grid-cols-[var(--layout-label-col)_minmax(0,1fr)] sm:gap-8">
         <p className="meta pt-2">
           <span className="text-primary">[{index}]</span> {title}
         </p>
@@ -34,7 +38,11 @@ export function Section({
           {lead && <p className="mt-3 text-base leading-relaxed text-muted-foreground">{lead}</p>}
         </div>
       </div>
-      {children}
+      {indent ? (
+        <div className="sm:pl-[calc(var(--layout-label-col)+2rem)]">{children}</div>
+      ) : (
+        children
+      )}
     </section>
   );
 }

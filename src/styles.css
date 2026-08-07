@@ -47,6 +47,10 @@
 :root {
   --radius: 0.125rem;
 
+  /* Shared label-column width for the Section header grid; content offsets
+     (Section's `indent` prop) derive from this plus its gap-8 so both stay in sync. */
+  --layout-label-col: 8rem;
+
   /* Deep CRT midnight */
   --background: oklch(0.16 0.024 270);
   --foreground: oklch(0.94 0.008 260);
@@ -228,6 +232,25 @@
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+}
+
+/* Small square icon-only button (nav toggle, theme toggle) */
+@utility icon-btn {
+  display: inline-flex;
+  height: 2.25rem;
+  min-height: 2.25rem;
+  width: 2.25rem;
+  min-width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted-foreground);
+  transition: color 150ms ease, border-color 150ms ease;
+  &:hover {
+    border-color: var(--color-border-strong);
+    color: var(--color-foreground);
+  }
 }
 
 /* Terminal-style tag chip */

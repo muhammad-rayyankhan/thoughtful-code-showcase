@@ -85,7 +85,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Muhammad Rayyan Khan" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "460" },
+      { property: "og:image:height", content: "460" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

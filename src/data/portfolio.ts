@@ -16,15 +16,9 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I'm a software engineering student at Karachi University (UBIT) who likes shipping small, working systems and then making them sturdier. Most of my time goes into AI-powered applications, agentic workflows, and the APIs that hold them together.",
-    "Passionate about solving real-world problems through software and continuously expanding my technical expertise — usually by building the thing before I feel ready to.",
-    "Currently exploring multi-agent orchestration, automation with the OpenAI Agents SDK and n8n, and full-stack architecture that stays readable as it grows.",
-  ],
-  facts: [
-    { label: "Focus", value: "AI agents, full-stack, REST APIs" },
-    { label: "Languages", value: "Python, TypeScript, C++, Java, SQL" },
-    { label: "Currently", value: "Building Artist.ai — an AI-native visual platform" },
-    { label: "Spoken", value: "Urdu · English · Arabic · Turkish" },
+    "I like taking a system from an idea to something that actually runs — then making it sturdier. Most of my projects start the same way: a small working version, shipped fast, followed by the unglamorous work of making it hold up.",
+    "That habit pulled me toward AI agents and full-stack systems — Artist.ai has me designing how autonomous agents coordinate and generate content together, while smaller projects like the OpenAI Agents SDK chatbot force me to get the fundamentals of agent orchestration right at a scale I can actually reason about.",
+    "I'd rather build the thing before I feel fully ready for it, then go back and fix what I got wrong. That's usually where the real learning happens.",
   ],
 };
 
@@ -42,7 +36,7 @@ export const featuredProjects = [
       "Exploring agentic AI workflows and orchestration patterns",
     ],
     stack: ["React", "Next.js", "TypeScript", "AI Agents"],
-    links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan" }],
+    links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan/Artist.ai" }],
   },
   {
     index: "02",
@@ -57,7 +51,12 @@ export const featuredProjects = [
       "Designed for future capability expansion without rewrites",
     ],
     stack: ["Python", "OpenAI Agents SDK"],
-    links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan" }],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/muhammad-rayyankhan/Python/tree/main/onedirection",
+      },
+    ],
   },
   {
     index: "03",
@@ -72,7 +71,13 @@ export const featuredProjects = [
       "Content-first layout tuned for long-form reading",
     ],
     stack: ["React", "Next.js"],
-    links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan" }],
+    links: [
+      { label: "Live demo", href: "https://website-seven-eta-74.vercel.app/" },
+      {
+        label: "GitHub",
+        href: "https://github.com/muhammad-rayyankhan/physical-ai-textbook",
+      },
+    ],
   },
   {
     index: "04",
@@ -87,88 +92,12 @@ export const featuredProjects = [
       "Clear separation between API layer and UI state",
     ],
     stack: ["React", "FastAPI", "Python"],
-    links: [{ label: "GitHub", href: "https://github.com/muhammad-rayyankhan" }],
+    links: [
+      { label: "GitHub", href: "https://github.com/muhammad-rayyankhan/studentTaskApp" },
+    ],
   },
 ];
 
-export const skillGroups = [
-  {
-    title: "Languages",
-    items: ["Python", "C", "C++", "Java", "PHP", "SQL", "TypeScript"],
-  },
-  {
-    title: "Frontend",
-    items: ["HTML", "CSS", "React.js", "Next.js", "Flutter"],
-  },
-  {
-    title: "Backend & APIs",
-    items: ["FastAPI", "Django", "Laravel", "Node.js", "REST APIs"],
-  },
-  {
-    title: "Networking",
-    items: ["Socket programming", "TCP/IP", "Network programming"],
-  },
-  {
-    title: "Databases",
-    items: ["MySQL", "PostgreSQL"],
-  },
-  {
-    title: "AI, automation & DevOps",
-    items: ["OpenAI Agents SDK", "n8n", "Docker", "Git & GitHub", "Linux", "VS Code"],
-  },
-];
-
-export const certifications = [
-  {
-    period: "Jan 2026",
-    title: "Agentic AI Level 1 Developer",
-    org: "PIAIC",
-    detail: "Agentic AI development track covering agent design, tooling, and orchestration.",
-  },
-  {
-    period: "May 2023",
-    title: "Build a Mobile App with Google Sheets (No-Code)",
-    org: "Coursera",
-    detail: "Rapid app prototyping on top of spreadsheet-backed data.",
-  },
-  {
-    period: "Oct 2022",
-    title: "Freelancing & Digital Marketing (x2)",
-    org: "DigiSkills.pk",
-    detail: "Two certifications covering client work fundamentals and digital marketing.",
-  },
-];
-
-export const education = [
-  {
-    period: "Expected 2028",
-    title: "B.S. Software Engineering",
-    org: "Karachi University (UBIT)",
-    detail:
-      "Relevant coursework: Object-Oriented Programming · Data Structures · Database Systems · Software Engineering · Operating Systems.",
-  },
-  {
-    period: "2024",
-    title: "Higher Secondary Certificate — Computer Science",
-    org: "SSAT Degree College, Karachi",
-    detail: "Intermediate studies in computing fundamentals, mathematics, and physics.",
-  },
-  {
-    period: "2022",
-    title: "Secondary School Certificate — Science",
-    org: "The Educators, Karachi",
-    detail: "Science stream, where the programming habit started.",
-  },
-];
-
-export const additional = {
-  languages: ["Urdu (Native)", "English (Professional)", "Arabic (Basic)", "Turkish (Basic)"],
-  softSkills: ["Teamwork", "Communication", "Adaptability"],
-  interests: [
-    "Artificial Intelligence",
-    "Agentic AI",
-    "Full-stack development",
-    "Automation",
-    "Open source",
-  ],
-};
+// Detailed skills, education, certifications, and languages live in the
+// downloadable resume (see profile.links / Contact) rather than on the page —
+// this site is meant to lead with projects and how I think about building them.

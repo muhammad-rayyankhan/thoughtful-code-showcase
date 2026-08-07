@@ -6,9 +6,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const sections = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "education", label: "Education" },
-  { id: "additional", label: "More" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -72,7 +69,7 @@ export function SiteNav() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="inline-flex h-9 min-h-9 w-9 min-w-9 items-center justify-center rounded-sm border border-border text-muted-foreground transition-colors hover:border-border-strong hover:text-foreground md:hidden"
+            className="icon-btn md:hidden"
           >
             {open ? <X className="h-4 w-4" aria-hidden="true" /> : <Menu className="h-4 w-4" aria-hidden="true" />}
           </button>

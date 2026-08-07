@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CtaButton } from "@/components/cta";
 import { Section } from "@/components/section";
 import { profile } from "@/data/portfolio";
 
@@ -22,6 +23,10 @@ export function Contact() {
 
     setErrors(next);
     if (Object.keys(next).length === 0) {
+      const subject = `Portfolio contact from ${name}`;
+      const body = `${message}\n\n— ${name} (${email})`;
+      const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       setSent(true);
       e.currentTarget.reset();
     }
@@ -33,11 +38,12 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="06"
+      index="03"
       title="Contact"
       lead="Happy to talk about AI projects, full-stack work, internships, or a role you're hiring for."
+      indent
     >
-      <div className="grid gap-10 sm:pl-40 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-12">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-12">
 
         <form onSubmit={onSubmit} noValidate className="space-y-5">
           <div>
@@ -102,16 +108,15 @@ export function Contact() {
             )}
           </div>
 
-          <button
-            type="submit"
-            className="inline-flex min-h-11 items-center border border-primary bg-primary px-5 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground transition-transform hover:-translate-y-0.5"
-          >
+          <CtaButton type="submit" variant="solid">
             Send message
-          </button>
+          </CtaButton>
 
 
           <p aria-live="polite" className="min-h-5 font-mono text-xs text-primary">
-            {sent ? "Sent — thanks, I'll reply within a couple of days." : ""}
+            {sent
+              ? "Opening your email client with this message prefilled — hit send there to reach me."
+              : ""}
           </p>
         </form>
 
@@ -136,11 +141,11 @@ export function Contact() {
             <dt className="meta">Resume</dt>
             <dd className="mt-1">
               <a
-                href="/Muhammad_Rayyan_Khan_Resume.docx"
-                download="Muhammad_Rayyan_Khan_Resume.docx"
+                href="/Muhammad_Rayyan_Khan_Resume.pdf"
+                download="Muhammad_Rayyan_Khan_Resume.pdf"
                 className="link-inline inline-flex items-center gap-1"
               >
-                Download DOCX
+                Download PDF
               </a>
             </dd>
           </div>
