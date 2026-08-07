@@ -46,6 +46,14 @@ export function Hero() {
         >
           Get in touch
         </a>
+        <a
+          href="/Muhammad_Rayyan_Khan_Resume.docx"
+          download="Muhammad_Rayyan_Khan_Resume.docx"
+          className="inline-flex min-h-11 items-center gap-2 border border-border-strong px-5 font-mono text-xs uppercase tracking-[0.14em] text-foreground transition-colors hover:border-highlight hover:text-highlight"
+        >
+          <Download className="h-3.5 w-3.5" aria-hidden="true" />
+          Download resume
+        </a>
       </div>
 
       <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
