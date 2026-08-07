@@ -5,7 +5,7 @@ export const profile = {
   email: "iamrayyan001@gmail.com",
   available: "Open to internships & junior engineering roles",
   summary:
-    "Computer Science student with a foundation in Artificial Intelligence, full-stack development, and software engineering. I build AI-powered applications, web platforms, and RESTful APIs with Python, FastAPI, React, and Next.js.",
+    "Software Engineering student with a foundation in Artificial Intelligence, full-stack development, and software engineering. I build AI-powered applications, web platforms, and RESTful APIs with Python, FastAPI, React, and Next.js.",
   links: [
     { label: "GitHub", href: "https://github.com/muhammad-rayyankhan" },
     { label: "LinkedIn", href: "https://linkedin.com/in/iamrayyan001" },
