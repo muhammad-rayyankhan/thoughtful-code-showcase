@@ -1,7 +1,7 @@
 import { ArrowUpRight, Download } from "lucide-react";
 import { CtaLink } from "@/components/cta";
 import { Section } from "@/components/section";
-import { about, featuredProjects, profile } from "@/data/portfolio";
+import { about, approach, featuredProjects, profile } from "@/data/portfolio";
 
 
 export function Hero() {
@@ -134,3 +134,69 @@ export function FeaturedProjects() {
   );
 }
 
+
+export function Approach() {
+  return (
+    <Section id="approach" index="03" title="How I work" lead={approach.lead}>
+      <div className="space-y-8">
+        <ol className="grid gap-6 md:grid-cols-3">
+          {approach.principles.map((p) => (
+            <li key={p.index} className="panel p-5">
+              <p className="meta">
+                <span className="text-primary">[{p.index}]</span>
+              </p>
+              <h3 className="mt-3 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                {p.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+            </li>
+          ))}
+        </ol>
+
+        <div className="grid gap-6 sm:grid-cols-[var(--layout-label-col)_minmax(0,1fr)] sm:gap-8">
+          <p className="meta pt-1">Toolkit</p>
+          <p className="max-w-2xl font-mono text-sm leading-relaxed text-foreground/90">
+            {approach.toolkit}
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-[var(--layout-label-col)_minmax(0,1fr)] sm:gap-8">
+          <p className="meta pt-1">Why hire me</p>
+          <ul className="max-w-2xl space-y-2">
+            {approach.hire.map((h) => (
+              <li key={h} className="flex gap-3 text-sm leading-relaxed text-foreground/90">
+                <span aria-hidden="true" className="mt-2 h-1 w-3 shrink-0 bg-highlight" />
+                {h}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+export function ResumeCta() {
+  return (
+    <aside className="panel my-4 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="max-w-xl">
+        <p className="meta">
+          <span className="text-primary">$</span> full details
+        </p>
+        <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+          This page is the highlights reel. The resume has the full chronology — education,
+          certifications, and the complete skill list.
+        </p>
+      </div>
+      <CtaLink
+        href="/Muhammad_Rayyan_Khan_Resume.pdf"
+        download="Muhammad_Rayyan_Khan_Resume.pdf"
+        variant="solid"
+        className="shrink-0"
+      >
+        <Download className="h-3.5 w-3.5" aria-hidden="true" />
+        Download resume (PDF)
+      </CtaLink>
+    </aside>
+  );
+}
