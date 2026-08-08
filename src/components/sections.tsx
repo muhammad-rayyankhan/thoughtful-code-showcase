@@ -34,7 +34,7 @@ export function Hero() {
           Get in touch
         </CtaLink>
         <CtaLink
-          href="/Muhammad_Rayyan_Khan_Resume.pdf"
+          href={`${import.meta.env.BASE_URL}Muhammad_Rayyan_Khan_Resume.pdf`}
           download="Muhammad_Rayyan_Khan_Resume.pdf"
           variant="outline"
         >
@@ -196,7 +196,7 @@ export function ResumeCta() {
         </p>
       </div>
       <CtaLink
-        href="/Muhammad_Rayyan_Khan_Resume.pdf"
+        href={`${import.meta.env.BASE_URL}Muhammad_Rayyan_Khan_Resume.pdf`}
         download="Muhammad_Rayyan_Khan_Resume.pdf"
         variant="solid"
         className="shrink-0"

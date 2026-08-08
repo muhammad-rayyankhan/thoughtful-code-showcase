@@ -145,7 +145,7 @@ export function Contact() {
             <dt className="meta">Resume</dt>
             <dd className="mt-1">
               <a
-                href="/Muhammad_Rayyan_Khan_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Muhammad_Rayyan_Khan_Resume.pdf`}
                 download="Muhammad_Rayyan_Khan_Resume.pdf"
                 className="link-inline inline-flex items-center gap-1"
               >
