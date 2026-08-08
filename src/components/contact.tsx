@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CtaButton } from "@/components/cta";
 import { Section } from "@/components/section";
-import { profile } from "@/data/portfolio";
+import { gmailComposeUrl, profile } from "@/data/portfolio";
 
 type Errors = { name?: string; email?: string; message?: string };
 
@@ -25,8 +25,7 @@ export function Contact() {
     if (Object.keys(next).length === 0) {
       const subject = `Portfolio contact from ${name}`;
       const body = `${message}\n\n— ${name} (${email})`;
-      const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
+      window.open(gmailComposeUrl(profile.email, subject, body), "_blank", "noopener,noreferrer");
       setSent(true);
       e.currentTarget.reset();
     }
@@ -115,7 +114,7 @@ export function Contact() {
 
           <p aria-live="polite" className="min-h-5 font-mono text-xs text-primary">
             {sent
-              ? "Opening your email client with this message prefilled — hit send there to reach me."
+              ? "Opening Gmail in a new tab with this message prefilled — hit send there to reach me."
               : ""}
           </p>
         </form>
@@ -124,7 +123,12 @@ export function Contact() {
           <div className="border-t border-border pt-3">
             <dt className="meta">Email</dt>
             <dd className="mt-1">
-              <a href={`mailto:${profile.email}`} className="link-inline">
+              <a
+                href={gmailComposeUrl(profile.email)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-inline"
+              >
                 {profile.email}
               </a>
             </dd>
@@ -154,7 +158,13 @@ export function Contact() {
             <dt className="meta">Elsewhere</dt>
             <dd className="mt-1 flex flex-wrap gap-x-5 gap-y-1">
               {profile.links.map((l) => (
-                <a key={l.label} href={l.href} className="link-inline">
+                <a
+                  key={l.label}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-inline"
+                >
                   {l.label}
                 </a>
               ))}

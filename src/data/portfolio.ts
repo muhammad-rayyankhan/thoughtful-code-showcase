@@ -1,3 +1,10 @@
+export function gmailComposeUrl(to: string, subject?: string, body?: string) {
+  const params = new URLSearchParams({ view: "cm", fs: "1", to });
+  if (subject) params.set("su", subject);
+  if (body) params.set("body", body);
+  return `https://mail.google.com/mail/?${params.toString()}`;
+}
+
 export const profile = {
   name: "Muhammad Rayyan Khan",
   role: "SOFTWARE ENGINEER",
@@ -10,7 +17,7 @@ export const profile = {
   links: [
     { label: "GitHub", href: "https://github.com/muhammad-rayyankhan" },
     { label: "LinkedIn", href: "https://linkedin.com/in/iamrayyan001" },
-    { label: "Email", href: "mailto:ray990khan@gmail.com" },
+    { label: "Email", href: gmailComposeUrl("ray990khan@gmail.com") },
   ],
 };
 

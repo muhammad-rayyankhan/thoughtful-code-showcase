@@ -46,7 +46,12 @@ export function Hero() {
       <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
         {profile.links.map((l) => (
           <li key={l.label}>
-            <a href={l.href} className="link-inline font-mono text-xs uppercase tracking-[0.12em]">
+            <a
+              href={l.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-inline font-mono text-xs uppercase tracking-[0.12em]"
+            >
               {l.label}
             </a>
           </li>
@@ -118,6 +123,8 @@ export function FeaturedProjects() {
                   <li key={l.label}>
                     <a
                       href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="link-inline inline-flex items-center gap-1 font-mono text-xs uppercase tracking-[0.12em]"
                     >
                       {l.label}
