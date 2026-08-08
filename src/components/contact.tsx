@@ -37,7 +37,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="03"
+      index="04"
       title="Contact"
       lead="Happy to talk about AI projects, full-stack work, internships, or a role you're hiring for."
       indent

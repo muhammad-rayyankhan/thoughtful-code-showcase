@@ -108,3 +108,33 @@ export const featuredProjects = [
 // Detailed skills, education, certifications, and languages live in the
 // downloadable resume (see profile.links / Contact) rather than on the page —
 // this site is meant to lead with projects and how I think about building them.
+
+// Portfolio-only storytelling content. Intentionally NOT a copy of the resume —
+// the resume PDF holds the full chronology, coursework, and certification list.
+export const approach = {
+  lead: "A short version of how I work. The long version — coursework, certifications, dates — lives in the resume.",
+  principles: [
+    {
+      index: "01",
+      title: "Ship the thin slice first",
+      body: "I get one honest end-to-end path working before adding surface area. It surfaces the real problems early, while they're still cheap to fix.",
+    },
+    {
+      index: "02",
+      title: "Read the system, not the symptom",
+      body: "When something breaks I look for the assumption that made it possible, then fix that category of bug rather than the single instance.",
+    },
+    {
+      index: "03",
+      title: "Boring structure, interesting problems",
+      body: "Clear boundaries between API, state, and UI. I'd rather spend my thinking on the agent orchestration than on untangling my own layers.",
+    },
+  ],
+  toolkit:
+    "Python, FastAPI, TypeScript, React, Next.js, REST APIs, OpenAI Agents SDK, Postgres, Git.",
+  hire: [
+    "I finish things — every project here runs, not just compiles.",
+    "I learn in public and fast: agentic AI, full-stack, and networking all self-driven.",
+    "I write for the next reader, whether that's a teammate or me in six months.",
+  ],
+};
