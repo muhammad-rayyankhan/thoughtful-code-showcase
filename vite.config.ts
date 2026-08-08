@@ -8,9 +8,9 @@ import { promises as fsp } from "node:fs";
 import { join } from "node:path";
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Public repo "portfolio" deployed as a GitHub Pages project site:
-// https://<user>.github.io/portfolio/
-const base = "/portfolio/";
+// Repo "thoughtful-code-showcase" deployed as a GitHub Pages project site:
+// https://<user>.github.io/thoughtful-code-showcase/
+const base = "/thoughtful-code-showcase/";
 
 export default defineConfig({
   vite: { base },
@@ -27,21 +27,21 @@ export default defineConfig({
     entry: "src/lib/nitro-static-entry.ts",
     // Crawl our actual base-prefixed route to prerender it to static HTML. The preset's
     // own default routes ("/", "/404.html") get crawled too but don't match the
-    // "/portfolio" base, so the `compiled` hook below cleans up after them.
+    // base, so the `compiled` hook below cleans up after them.
     prerender: { routes: [base] },
     hooks: {
       async compiled(nitro) {
         const { publicDir } = nitro.options.output;
 
-        // With base "/portfolio/" the crawler writes the real prerendered page to
-        // "<publicDir>/portfolio/index.html". Flatten it to the public dir root, which is
-        // what GitHub Pages serves as "/portfolio/".
-        const basedDir = join(publicDir, "portfolio");
+        // With base "/thoughtful-code-showcase/" the crawler writes the real prerendered
+        // page to "<publicDir>/thoughtful-code-showcase/index.html". Flatten it to the
+        // public dir root, which is what GitHub Pages serves as "/thoughtful-code-showcase/".
+        const basedDir = join(publicDir, base.replace(/^\/|\/$/g, ""));
         await fsp.rename(join(basedDir, "index.html"), join(publicDir, "index.html")).catch(() => {});
         await fsp.rm(basedDir, { recursive: true, force: true });
 
         // Drop stray files produced by crawling the preset's unprefixed default routes
-        // ("/", "/404.html"), which don't match the "/portfolio" base.
+        // ("/", "/404.html"), which don't match the base.
         await fsp.rm(join(publicDir, "index"), { force: true });
         await fsp.rm(join(publicDir, "404.html"), { force: true });
 
